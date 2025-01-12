@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Made</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f4; /* Latar belakang abu-abu muda */
+    background-image: url('https://www.zmo.ai/wp-content/uploads/2023/09/powerpoint-slide-with-white-background-SB02298-min-scaled.jpg'); /* Ganti dengan gambar latar belakang yang sesuai */
+    background-size: cover;
+    background-position: center;
+        }
+
+        h1, h2 {
+        font-family: 'Pacifico', cursive;
+        }
+ 
+        .header {
+            position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: none; /* Pastikan tidak ada background */
+}
+
+        .slide:hover::after {
+    content: "Discover More";
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+        
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 15s infinite;
+        }
+
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+    object-fit: contain;
+        }
+
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+    33.33% { transform: translateX(0); }
+    50% { transform: translateX(-100%); }
+    83.33% { transform: translateX(-100%); }
+    100% { transform: translateX(-200%); }
+        }
+
+        .container {
+            display: flex;
+        }
+
+
+        .menu {
+            width: 20%;
+            background-color: #007bff;
+            color: white;
+            min-height: calc(100vh - 300px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: linear-gradient(45deg, #007bff, #00c6ff);
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .menu a:hover {
+            background-color: #0056b3;
+    transform: rotate(3deg) scale(1.1);
+    color: #ffcc00;
+}
+
+        .menu a {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.menu a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.about-photo {
+    transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.1);
+}
+img {
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.2) ;
+    transition: transform 0.5s ease;
+}
+
+
+        .content-wrapper {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bayangan lebih tegas */
+    padding: 20px;
+    border-radius: 8px;
+    background: rgb(255, 255, 255); /* Pastikan latar belakang konten tetap terlihat */
+}
+
+.family-member img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer {
+    background: linear-gradient(to right, #0056b3, #007bff);
+}
+        .footer {
+            clear: both;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showContent(sectionId) {
+            // Hide all content sections
+            document.querySelectorAll('.content').forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Show the selected content section
+            const selectedContent = document.getElementById(sectionId);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="slides">
+            <div class="slide">
+                <img src="gambar1.png" alt="Ad 1">
+            </div>
+            <div class="slide">
+                <img src="3.png" alt="Ad 2">
+            </div>
+            <div class="slide">
+                <img src="about03-1366x300.jpg" alt="Ad 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <a onclick="showContent('home-content')">Home</a>
+            <a onclick="showContent('education-content')">Education</a>
+            <a onclick="showContent('family-content')">Family</a>
+            <a onclick="showContent('about-content')">About</a>
+        </div>
+
+        <div class="content-wrapper">
+            <div id="home-content" class="content">
+                <h1>Welcome to my website!</h1>
+                <p>You can explore about me here :D</p>
+                <a href="madrywn@gmail.com" class="cta-button">Contact Me</a>
+            </div>
+            
+            <style>
+                .cta-button {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    transition: background-color 0.3s ease;
+                }
+            
+                .cta-button:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+            
+
+            <div id="education-content" class="content">
+                <h2>Education</h2>
+                <p>TK - TK Kartini Tuban (2013-2016)</p>
+                <p>SD - SDN 4 Tuban (2016-2020)</p>
+                <p>SMP - SMPK Soverdi Tuban (2020-2022)</p>
+                <p>SMA - SMAN 11 Denpasar (2022-2024)</p>
+            </div>
+
+            <div id="family-content" class="content">
+                <h2>My Family</h2>
+                <div class="family-tree">
+                    <div class="family-row top-row">
+                        <div class="family-member">
+                            <img src="bapak.jpeg" alt="Father">
+                            <p>Ayah (I Made Muria)</p>
+                        </div>
+                        <div class="family-member">
+                            <img src="mamak.jpeg" alt="Mother">
+                            <p>Ibu (Ni Kadek Utari)</p>
+                        </div>
+                    </div>
+                    <div class="family-row bottom-row">
+                        <div class="family-member">
+                            <img src="widi.jpeg" alt="Child 1">
+                            <p>Kakak (I Wayan Widiana)</p>
+                        </div>
+                        <div class="family-member">
+                            <img src="aku.jpeg" alt="Child 2">
+                            <p>Saya (I Made Adi Aryawan)</p>
+                        </div>
+                        <div class="family-member">
+                            <img src="omang.jpeg" alt="Child 3">
+                            <p>Adik (Ni Komang Prisha)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                .family-tree {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    position: relative;
+                }
+            
+                .family-row {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    position: relative;
+                }
+            
+                .family-member {
+                    text-align: center;
+                    width: 80px;
+                }
+            
+                .family-member img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 50%;
+                    border: 2px solid #007bff;
+                }
+            </style>
+            
+            
+            
+
+            <div id="about-content" class="content">
+                <h2>About Me</h2>
+                <!-- Gambar berada di atas nama -->
+                <img src="aku.jpeg" alt="Foto Saya" class="about-photo">
+                <p>I Made Adi Aryawan</p>
+                <p>2401010412</p>
+                <p>TI-MTI</p>
+            </div>
+            
+            <style>
+                /* Tambahkan gaya untuk gambar di content about */
+                .about-photo {
+                    width: 150px; /* Atur lebar gambar */
+                    height: auto; /* Pertahankan rasio gambar */
+                    border: 2px solid #007bff; /* Tambahkan border */
+                    margin-bottom: 10px; /* Beri jarak dengan teks di bawahnya */
+                }
+            </style>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://wa.me/6289677674479"><i class="fab fa-whatsapp"></i> WhatsApp</a> |
+        <a href="https://instagram.com/texas95s"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+    
+</body>
+</html>
